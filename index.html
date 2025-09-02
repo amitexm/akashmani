@@ -44,7 +44,7 @@
 
 		<!-- Controls -->
 		<div class="d-flex gap-2">
-		  <button class="btn btn-sm btn-outline-secondary" id="btnLang" aria-label="Change language">
+		  <button class="btn btn-sm btn-outline-secondary d-none" id="btnLang" aria-label="Change language">
 			<i class="bi bi-translate me-1"></i><span>English</span>
 		  </button>
 		  <button class="btn btn-sm btn-outline-secondary" id="btnMode" aria-label="Toggle dark mode">
@@ -63,23 +63,35 @@
     
 	<div class="invitation-inner position-relative">
 
-      <header class="hero py-5 border-bottom" id="top">
+      <header class="hero py-3" id="top">
     <div class="container text-center">
-      <img id="portrait" class="portrait mb-3" src="portrait.jpg" alt="चित्र" />
+    <!--
+	  <img id="portrait" class="portrait mb-3" src="portrait.jpg" alt="चित्र" />
       <div class="mb-2"><span class="badge rounded-pill badge-soft px-3 py-2"><i class="bi bi-flower2 me-2"></i><span id="honorific">श्रद्धांजलि</span></span></div>
       <h1 class="serif fw-bold mb-1" id="fullName">आकाश मणि पटेल</h1>
       <p class="text-muted mb-3" id="lifeDates">(1952 – 2025)</p>
-      <p class="lead tribute" id="coverQuote">आपार दुख के साथ सूचित कर रही हूँ की मेरे परम पूज्य पिता स्व० आकाश मणि पटेल का देहावसान  आपसे विनम्र निवेदन है कि उनकी आत्मा की शांति हेतु आयोजित भोज एवं अंतिम अरदास में पधारकर हम पर उपकार करें।</p>
+	-->
+		
+	  <p >!! ॐ शान्तिः शान्तिः शान्तिः !!</p>	
+	  
+	  <h1 class="serif fw-bold mb-3" id="subTitle"><i class="bi bi-flower2 me-2"></i>शोक संदेश <i class="bi bi-flower2 me-2"></i></h1>	
+	
+      <p class="tribute" id="coverQuote">आपको बड़े दुख के साथ सूचित कर रही हूँ की मेरे पूजनीय पिता जी </p>
+	  <h3 class="d-block fw-bold mb-3"> श्री आकाश मणि पटेल जी</h3>
+	  <p>का दिनांक 21/08/2025 दिन वृहस्पतिवार को स्वर्गवास हो गया एवं उनका दाह संस्कार सम्पन्न हुआ।  उनकी दिवंगत आत्मा की शान्ति हेतु  
+		<span class="d-block h1 fw-bold my-3">!! ब्रह्मभोज !!</span>  
+		दिनांक 05/09/2025 दिन शुक्रवार को सायंकाल होना शुनिश्चित किया गया है।  अतः आप से विनम्र निवेदन है कि उक्त तिथि पर आयोजित भोज एवं अंतिम अरदास में पधारकर उनकी दिवंगत आत्मा की शांति हेतु ईश्वर से प्रार्थना करें।</p>
     </div>
   </header>
 
-      <main class="py-5">
+      <main class="">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-8">
-          <div class="card card-soft p-4">
-            <h2 class="serif h4 mb-3">समारोह विवरण</h2>
-            <div id="ceremonyList" class="vstack gap-3"></div>
+          <div class="card card-soft p-4 text-center">
+            <h2 class="serif h4 mb-3">ब्राह्मणभोज  एवं प्रीतिभोज</h2> 
+            <div id="ceremonyList" class="vstack gap-3">दिनांक 05/09/2025 दिन शुक्रवार को सायंकाल हमारे निवास स्थल से सम्पन्न होंगे। </div>
+			<!--<div id="ceremonyList" class="vstack gap-3"> </div>-->
           </div>
 
           <div class="card card-soft p-4 mt-4" id="livestreamCard" hidden>
@@ -99,7 +111,7 @@
     </div>
   </main>
 
-      <footer class="py-5 border-top text-center">
+      <footer class="py-5 text-center">
     <p class="mb-1 text-muted">आपकी उपस्थिति और प्रार्थनाएँ हमारे लिए अमूल्य हैं।</p>
     <p class="small text-muted mb-0"> समस्त पटेल परिवार</p>
   </footer>
@@ -143,7 +155,7 @@
   btnLang.addEventListener('click', () => {
   if (lang === 'hi') {
     document.documentElement.lang = 'en';
-    document.getElementById('honorific').textContent = 'In Loving Memory';
+    //document.getElementById('honorific').textContent = 'In Loving Memory';
     document.getElementById('fullName').textContent = '[Full Name]';
     document.getElementById('coverQuote').textContent = 'May their soul rest in peace.';
     btnLang.querySelector('span').textContent = 'हिन्दी';
@@ -179,7 +191,7 @@
   });
 
   // Footer year
-  document.getElementById('year').textContent = new Date().getFullYear();
+  //document.getElementById('year').textContent = new Date().getFullYear();
   
   
   // --- Language Switch ---
