@@ -18,7 +18,7 @@
     margin: 0rem auto;
     padding: 1rem;
     background: #fff;
-    border: 12px solid transparent;
+    /*border: 12px solid transparent;*/
     border-image: linear-gradient(45deg, #b1976b, #e6d5b8, #b1976b) 1;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
